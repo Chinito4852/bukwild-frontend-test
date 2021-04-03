@@ -1,0 +1,46 @@
+* {
+    background-color: gray;
+}
+
+#page-ui {
+    margin-top: 0;
+    display: grid;
+    grid-template-columns: 50% auto 40%;
+    grid-template-rows: 60% auto;
+    row-gap: 0rem;
+}
+
+#headline {
+    font-size: 2.5rem;
+}
+
+#subhead {
+    grid-column: 3 / span 1;
+}
+
+#call-to-action {
+    grid-column: 1 / span 3;
+    grid-row: 2 / span 1;
+    color: black;
+    background-color: white;
+    padding: 5rem;
+}
+
+#cta {
+    background-color: white;
+    grid-column: 1 / span 2;
+    grid-row: 2 / span 1;
+    padding: 4rem;
+}
+
+#cta-talk {
+    background-color: white;
+    grid-column: 3 / span 1;
+    grid-row: 2 / span 1;
+    text-transform: uppercase;
+}
+
+.cta-text {
+    color: black;
+    background-color: white;
+}
