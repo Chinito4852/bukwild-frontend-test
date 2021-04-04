@@ -3,51 +3,91 @@
 }
 
 .App {
-  height: 100%;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
-  justify-content: center;
-  align-items: center;
-}
-
-.App > * {
-  margin-left: 5rem;
-  margin-right: 5rem;
-  max-width: 1440px;
-}
-
-.layout-ui {
-  padding-top: 1.2rem;
   
 }
 
-#list-logo {
- 
+.app-body {
+  max-width: 1440px;
+  height: 100vh;
+  margin-left: 5rem;
+  margin-right: 5rem;
+  padding-top: 1.25rem;
+  display: grid;
+  grid-template-columns: 25% 25% 10% 25% 15%;
+  grid-template-rows: 30% 40% 30%;
+  grid-gap: 0 0;
 }
 
-.pageList > ul {
-  padding: 0;
-  list-style-type: none; 
+.list-logo {
+  grid-column: 1 / span 1;
+}
+
+.page-list {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.page-list > * {
+  cursor: pointer;
 }
 
 .active {
   color: orange;
 }
 
-#contact {
-  
+.contact {
+  grid-column: 5 / span 1;
 }
 
 .contact-btn {
-  margin: 0.2rem;
   border: solid 1px white;
-  padding: 0.75rem 1.2rem;
-  font-weight: bold;
+  padding: 0.75rem 2rem;
+  background-color: transparent;
 }
 
-PageUI {
-  position: absolute;
-  bottom: 0vh;
+.headline {
+  grid-column: 1 / span 2;
+  grid-row: 2 / span 1;
+  padding-right: 2rem;
+  height: 100%;
+  min-height: 100%;
+  
+}
+
+.subhead {
+  grid-column: 4 / span 2;
+  grid-row: 2 / span 1;
+}
+
+.cta-content {
+  background-color: white;
+  color: black;
+  grid-column: 1 / span 3;
+  grid-row: 3 / span 1;
+  display: flex;
+  align-items: center;
+  padding-left: 3.5rem;
+  padding-right: 3.5rem;
+}
+
+.cta-talk {
+  background-color: white;
+  grid-column: 4 / span 2;
+  grid-row: 3 / span 1;
+  display: flex;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.talk-arrow {
+  color: orange;
+  font-size: 1rem; 
+}
+
+.cta-content > *,
+.cta-talk > * {
+  color: black;
+  background-color: white;
 }
