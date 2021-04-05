@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/bukwild-frontend-test/static/css/main.6b2b3db6.chunk.css",
-    "main.js": "/bukwild-frontend-test/static/js/main.80082721.chunk.js",
-    "main.js.map": "/bukwild-frontend-test/static/js/main.80082721.chunk.js.map",
+    "main.js": "/bukwild-frontend-test/static/js/main.33714b61.chunk.js",
+    "main.js.map": "/bukwild-frontend-test/static/js/main.33714b61.chunk.js.map",
     "runtime-main.js": "/bukwild-frontend-test/static/js/runtime-main.2591ed28.js",
     "runtime-main.js.map": "/bukwild-frontend-test/static/js/runtime-main.2591ed28.js.map",
     "static/js/2.89f694d6.chunk.js": "/bukwild-frontend-test/static/js/2.89f694d6.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.2591ed28.js",
     "static/js/2.89f694d6.chunk.js",
     "static/css/main.6b2b3db6.chunk.css",
-    "static/js/main.80082721.chunk.js"
+    "static/js/main.33714b61.chunk.js"
   ]
 }
