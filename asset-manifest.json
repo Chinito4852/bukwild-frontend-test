@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/bukwild-frontend-test/static/css/main.6b2b3db6.chunk.css",
+    "main.js": "/bukwild-frontend-test/static/js/main.80082721.chunk.js",
+    "main.js.map": "/bukwild-frontend-test/static/js/main.80082721.chunk.js.map",
+    "runtime-main.js": "/bukwild-frontend-test/static/js/runtime-main.2591ed28.js",
+    "runtime-main.js.map": "/bukwild-frontend-test/static/js/runtime-main.2591ed28.js.map",
+    "static/js/2.89f694d6.chunk.js": "/bukwild-frontend-test/static/js/2.89f694d6.chunk.js",
+    "static/js/2.89f694d6.chunk.js.map": "/bukwild-frontend-test/static/js/2.89f694d6.chunk.js.map",
+    "static/js/3.cd5a1bef.chunk.js": "/bukwild-frontend-test/static/js/3.cd5a1bef.chunk.js",
+    "static/js/3.cd5a1bef.chunk.js.map": "/bukwild-frontend-test/static/js/3.cd5a1bef.chunk.js.map",
+    "index.html": "/bukwild-frontend-test/index.html",
+    "static/css/main.6b2b3db6.chunk.css.map": "/bukwild-frontend-test/static/css/main.6b2b3db6.chunk.css.map",
+    "static/js/2.89f694d6.chunk.js.LICENSE.txt": "/bukwild-frontend-test/static/js/2.89f694d6.chunk.js.LICENSE.txt",
+    "static/media/abc_logo.c72ca4e0.svg": "/bukwild-frontend-test/static/media/abc_logo.c72ca4e0.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.2591ed28.js",
+    "static/js/2.89f694d6.chunk.js",
+    "static/css/main.6b2b3db6.chunk.css",
+    "static/js/main.80082721.chunk.js"
+  ]
+}
