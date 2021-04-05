@@ -9,7 +9,7 @@
 
 .app-body {
   max-width: 1440px;
-  height: auto;
+  height: 100vh;
   min-height: 100vh;
   margin: 0 auto;
   padding-top: 1.25rem;
@@ -36,10 +36,17 @@
 }
 
 .row-3 {
-  height: 30%;
+  min-height: 30%;
   background-color: white;
-  padding-top: 8vh;
-  padding-bottom: 8vh;
+  
+}
+
+/* Reduce row-3 padding for smaller screens */
+@media only screen and (max-width: 780px) {
+  .row-3 {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+  }
 }
 
 /**************************************************/
@@ -74,6 +81,8 @@
   background-color: transparent;
   float: right;
   cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 /**************************************************/
@@ -90,11 +99,19 @@
   grid-column: 1 / span 2;
   height: auto;
   min-height: 100%;
-  font-size: 2.7rem;
+  font-size: 3rem;
+}
+
+.headline-txt {
+  
 }
 
 .subhead {
   grid-column: 4 / span 2;
+}
+
+.subhead-txt {
+  line-height: 2;
 }
 
 /* Place subhead under the header for smaller screens */
@@ -102,6 +119,9 @@
   .headline {
     grid-column: 1 / span 5;
     grid-row: 1 / span 1;
+  }
+  .headline-txt {
+    margin: 0;
   }
   .subhead {
     grid-column: 1 / span 5;
@@ -119,6 +139,7 @@
   align-items: center;
   padding-left: 3.5rem;
   padding-right: 3.5rem;
+  font-size: 1.5rem;
 }
 
 .cta-talk {
@@ -126,6 +147,7 @@
   display: flex;
   align-items: center;
   text-transform: uppercase;
+  letter-spacing: 0.1rem;
 }
 
 .talk-arrow {

@@ -69,7 +69,7 @@ function App(props) {
   const renderHeadline = () => {
     return (
       <div className="headline">
-        <h1>{blocks[0].headline}</h1>
+        <h1 className="headline-txt">{blocks[0].headline}</h1>
       </div>
     );
   }
@@ -78,7 +78,7 @@ function App(props) {
   const renderSubHead = () => {
     return (
       <div className="subhead">
-        <h4>{blocks[0].subhead}</h4>
+        <p className="subhead-txt">{blocks[0].subhead}</p>
       </div>
     );
   }
