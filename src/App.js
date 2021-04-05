@@ -1,34 +1,51 @@
 import React, {useState, useEffect} from 'react';
 import logo from './abc_logo.svg';
-//import b from './backgrounds.slide_one.jpg';
-//import PageUI from './PageUI';
 import './App.css';
 
 function App(props) {
 
-  const [state, setState] = useState(props.pages[0].title);
+  // The state of the component is kept by the headline, blocks, and backgroundName variables.
+  // The headline variable stores the headline of the current page. The blocks variable stores
+  // all the content to be displayed on the current page, and the backgroundName stores the 
+  // name of the background image to be used. These state variables will be initialized when
+  // the component loads and changed by a handler function called when an item on the list of
+  // pages is clicked.
+  const [headline, setHeadline] = useState(props.pages[0].title);
   const [blocks, setBlocks] = useState(props.pages[0].blocks);
   const [backgroundName, setBackgroundName] = useState(props.pages[0].blocks[0].background);
 
+  // Function that is called when state variables are changed. Used for changing the page's
+  // background image in this component.
   useEffect(() => {
     //console.log(backgroundName);
-    //console.log(document.body.style);
-    //document.body.style.backgroundImage = "url('backgroundName')";
+    document.body.style.backgroundImage = `url(/backgrounds/${backgroundName})`;
   });
 
+  // Handler function for changing pages. Will be called by clicking on page list items
   const changePage = (page) => {
-    setState(page.title);
+    setHeadline(page.title);
     setBlocks(page.blocks);
     setBackgroundName(page.blocks[0].background);
   }
 
+  // Renders the page logo and list of pages in the component
+  const renderLogoAndPageList = () => {
+    return (
+      <div className="list-logo">
+        <img src={logo}></img>
+        {renderPageList()}
+      </div>
+    );
+  }
+
+  // Renders the list of pages. Called by renderLogoAndPageList()
   const renderPageList = () => {
     return (
       <ul className="page-list">
         {props.pages.map((page, key) => {
           return (
             <li>
-              <span className={(state === page.title) ? "active" : ""} 
+              <span className={(headline === page.title) ? "active" : ""} 
                     onClick={() => {changePage(page)}}>
                 {page.title}
               </span>
@@ -39,6 +56,16 @@ function App(props) {
     );
   }
 
+  // Renders the "Contact Us" button
+  const renderContactButton = () => {
+    return (
+      <div className="contact">
+        <button className="contact-btn">Contact Us</button>
+      </div>
+    );
+  }
+
+  // Renders the page headline
   const renderHeadline = () => {
     return (
       <div className="headline">
@@ -47,6 +74,7 @@ function App(props) {
     );
   }
 
+  // Renders the page subhead
   const renderSubHead = () => {
     return (
       <div className="subhead">
@@ -55,6 +83,7 @@ function App(props) {
     );
   }
 
+  // Renders the call to action content
   const renderCallToAction = () => {
     return (
       <div className="cta-content">
@@ -63,6 +92,7 @@ function App(props) {
     );
   }
 
+  // Renders the "Let's talk" section of the call to action
   const renderTalk = () => {
     return (
       <div className="cta-talk">
@@ -71,24 +101,27 @@ function App(props) {
     );
   }
 
+  // Elements in this component are grouped in three rows. The logo, page list, and contact button
+  // are grouped in the first row, the headline and subhead in the second, and the call to action
+  // in the thrid.
   return (
-    <div className="App"
-         style={{ backgroundImage: `url(/backgrounds/${backgroundName})` }}>
+    <div className="App">
       <div className="app-body">
+
+        <div className="row-1">
+          {renderLogoAndPageList()}
+          {renderContactButton()}
+        </div>
+  
+        <div className="row-2">
+          {renderHeadline()}
+          {renderSubHead()}
+        </div>
         
-        <div className="list-logo">
-          <img src={logo}></img>
-          {renderPageList()}
+        <div className="row-3">
+          {renderCallToAction()}
+          {renderTalk()}
         </div>
-        <div className="contact">
-          <button className="contact-btn">Contact Us</button>
-        </div>
-
-        {renderHeadline()}
-        {renderSubHead()}
-
-        {renderCallToAction()}
-        {renderTalk()}
         
       </div>
     </div>
